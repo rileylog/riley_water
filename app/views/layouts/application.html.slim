@@ -6,6 +6,7 @@ html
       = content_for?(:title) ? yield(:title) : 'Water Rights Listing'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Water Rights Listing'}"
     = stylesheet_link_tag "application"
+    == google_maps_api
     / Foundation 5 won't work with Rails Turbolinks
     / Modernizr is required for Zurb Foundation
     == javascript_include_tag "vendor/modernizr"
