@@ -6,19 +6,30 @@
 .row
   #map_canvas.large-6.columns
   #data.large-6.columns
-    .panel
-      h5 This is a panel
-      p
-        | It has an easy to override visual style, and is appropriately subdued.
-    .panel
-      h5 This is a panel
-      p
-        | It has an easy to override visual style, and is appropriately subdued.
-    .panel
-      h5 This is a panel
-      p
-        | It has an easy to override visual style, and is appropriately subdued.
-    .panel
-      h5 This is a panel
-      p
-        | It has an easy to override visual style, and is appropriately subdued.
+    h3 Listings
+    dl.tabs data-tab=""
+      dd.active
+        a href="#wanted" Wanted
+      dd
+        a href="#for_sale" For Sale
+    .tabs-content
+      #wanted.content.active
+        .panel.radius
+          h5 This is a panel
+          p
+            | It has an easy to override visual style, and is appropriately subdued.
+        .panel.radius
+          h5 This is a panel
+          p
+            | It has an easy to override visual style, and is appropriately subdued.
+        .panel.radius
+          h5 This is a panel
+          p
+            | It has an easy to override visual style, and is appropriately subdued.
+        .panel.radius
+          h5 This is a panel
+          p
+            | It has an easy to override visual style, and is appropriately subdued.
+      #for_sale.content
+        p Ain't nothin fo sale yet!
+    

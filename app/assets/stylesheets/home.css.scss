@@ -1,6 +1,7 @@
 main {
-  margin-top: 20px;
-  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  background-color: #b3b3b3;
 }
 
 #map_canvas {
@@ -9,5 +10,17 @@ main {
 
 #data {
   padding-right: 0px;
+  h3 {
+    margin-top: 0px;
+  }
+}
+
+.panel {
+  margin-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  h5 {
+    margin-bottom: 5px;
+  }
 }
 
