@@ -7,3 +7,10 @@ $ ->
     zoom: 10
     mapTypeId: google.maps.MapTypeId.ROADMAP
   map = new google.maps.Map($("#map_canvas")[0], mapOptions)
+
+  layer = new google.maps.FusionTablesLayer(
+    query:
+      select: "geometry"
+      from: "1zPKs09ATpEj_LP7Vp9Z58E-pV1j6kGVxbcgv4Sw"
+  )
+  layer.setMap map
