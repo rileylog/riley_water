@@ -16,6 +16,7 @@ gem 'rolify'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'unicorn'
+gem 'carrierwave'
 group :development do
   gem 'powder'
   gem 'pry-rails'

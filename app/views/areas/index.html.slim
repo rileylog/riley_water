@@ -4,6 +4,7 @@ table
   tr
     th Name
     th Color
+    th Kml
     th
     th
     th
@@ -12,6 +13,7 @@ table
     tr
       td = area.name
       td = area.color
+      td = area.kml.url
       td = link_to 'Show', area
       td = link_to 'Edit', edit_area_path(area)
       td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
