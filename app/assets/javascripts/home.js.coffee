@@ -2,6 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
+  displayArea = (doc) ->
+    for area in gon.areas
+      if doc[0].url == area.kml.url
+        console.log area.color
+        doc[0].placemarks[0].polygon.setOptions(
+          fillColor: area.color
+          fillOpacity: 0.25
+        )
+        doc[0].placemarks[0].polygon.setMap(map)
+
   mapOptions =
     center: new google.maps.LatLng(40.5555, -111.888)
     zoom: 10
@@ -15,9 +25,17 @@ $ ->
   # )
   # layer.setMap map
 
-  myParser = new geoXML3.parser(map: map)
-  myParser.parse "http://water-rights-listing.dev/central.kml"
-  myParser.parse "http://water-rights-listing.dev/north.kml"
-  myParser.parse "http://water-rights-listing.dev/east.kml"
-  myParser.parse "http://water-rights-listing.dev/west.kml"
+  myParser = new geoXML3.parser(
+    afterParse: displayArea
+    suppressInfoWindows: true
+  )
+  # myParser.parse "http://water-rights-listing.dev/central.kml"
+  # myParser.parse "http://water-rights-listing.dev/north.kml"
+  # myParser.parse "http://water-rights-listing.dev/east.kml"
+  # myParser.parse "http://water-rights-listing.dev/west.kml"
   # console.log doc.overlays
+
+  for area in gon.areas
+    myParser.parse(area.kml.url)
+    # printShit "OMG"
+

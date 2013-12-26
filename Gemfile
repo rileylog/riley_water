@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'unicorn'
 gem 'carrierwave'
+gem 'gon'
 group :development do
   gem 'powder'
   gem 'pry-rails'
