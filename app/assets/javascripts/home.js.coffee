@@ -2,15 +2,35 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
+  setHighlighted = ->
+    this.setOptions(
+      fillOpacity: 0.5
+      strokeWeight: 2
+    )
+
+  removeHighlighted = ->
+    this.setOptions(
+      fillOpacity: 0.25
+      strokeWeight: 0.5
+    )
+
+  setListings = ->
+    alert this.title
+
   displayArea = (doc) ->
     for area in gon.areas
       if doc[0].url == area.kml.url
-        console.log area.color
+        doc[0].placemarks[0].polygon.title = area.id
+        # console.log doc[0].placemarks[0].polygon.title
         doc[0].placemarks[0].polygon.setOptions(
           fillColor: area.color
           fillOpacity: 0.25
+          strokeWeight: 0.5
         )
         doc[0].placemarks[0].polygon.setMap(map)
+        google.maps.event.addListener doc[0].placemarks[0].polygon, 'mouseover', setHighlighted
+        google.maps.event.addListener doc[0].placemarks[0].polygon, 'mouseout', removeHighlighted
+        google.maps.event.addListener doc[0].placemarks[0].polygon, 'click', setListings
 
   mapOptions =
     center: new google.maps.LatLng(40.5555, -111.888)
