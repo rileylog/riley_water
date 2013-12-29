@@ -1,0 +1,25 @@
+h1 Listing wanteds
+
+table
+  tr
+    th Area
+    th Volume
+    th Source
+    th Description
+    th
+    th
+    th
+
+  - @wanteds.each do |wanted|
+    tr
+      td = wanted.area
+      td = wanted.volume
+      td = wanted.source
+      td = wanted.description
+      td = link_to 'Show', wanted
+      td = link_to 'Edit', edit_wanted_path(wanted)
+      td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Wanted', new_wanted_path

@@ -1,4 +1,6 @@
 WaterRightsListing::Application.routes.draw do
+  resources :wanteds
+
   resources :areas
 
   root :to => "home#index"

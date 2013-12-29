@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Area:
+  = @wanted.area
+p
+  strong Volume:
+  = @wanted.volume
+p
+  strong Source:
+  = @wanted.source
+p
+  strong Description:
+  = @wanted.description
+
+= link_to 'Edit', edit_wanted_path(@wanted)
+'|
+= link_to 'Back', wanteds_path
