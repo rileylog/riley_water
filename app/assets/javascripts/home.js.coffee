@@ -15,7 +15,11 @@ $ ->
     )
 
   setListings = ->
-    alert this.title
+    $('#wanted').html(
+      for wanted in gon.wanteds
+        if wanted.area_id == this.title
+          "<div class='panel radius'><h5>#{wanted.volume} ac-ft</h5><p>#{wanted.source} | #{wanted.description}</p></div>"
+    )
 
   displayArea = (doc) ->
     for area in gon.areas
