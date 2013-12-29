@@ -15,6 +15,9 @@ $ ->
     )
 
   setListings = ->
+    for area in gon.areas
+      if area.id == this.title
+        $('#listing_title').html "#{area.name} Listings"
     $('#wanted').html(
       for wanted in gon.wanteds
         if wanted.area_id == this.title
