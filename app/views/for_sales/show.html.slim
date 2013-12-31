@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Area:
+  = @for_sale.area.name
+p
+  strong Volume:
+  = @for_sale.volume
+p
+  strong Source:
+  = @for_sale.source
+p
+  strong Description:
+  = @for_sale.description
+p
+  strong Transferable to:
+  = @for_sale.transferable_to
+
+= link_to 'Edit', edit_for_sale_path(@for_sale)
+'|
+= link_to 'Back', for_sales_path

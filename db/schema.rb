@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131229111022) do
+ActiveRecord::Schema.define(version: 20131231152201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20131229111022) do
     t.datetime "updated_at"
     t.string   "kml"
   end
+
+  create_table "for_sales", force: true do |t|
+    t.integer  "area_id"
+    t.float    "volume"
+    t.string   "source"
+    t.string   "description"
+    t.string   "transferable_to", default: [], array: true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "for_sales", ["area_id"], name: "index_for_sales_on_area_id", using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"

@@ -1,4 +1,6 @@
 WaterRightsListing::Application.routes.draw do
+  resources :for_sales
+
   resources :wanteds
 
   resources :areas

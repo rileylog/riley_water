@@ -19,6 +19,7 @@ gem 'unicorn'
 gem 'carrierwave'
 gem 'gon'
 group :development do
+  gem 'meta_request'
   gem 'powder'
   gem 'pry-rails'
   gem 'pry-theme'
