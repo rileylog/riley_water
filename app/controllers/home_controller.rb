@@ -4,5 +4,6 @@ class HomeController < ApplicationController
     # @areas = Area.all
     gon.areas = Area.all
     gon.wanteds = Wanted.all
+    gon.for_sales = ForSale.all
   end
 end

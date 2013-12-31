@@ -2,6 +2,9 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $ ->
+  polygons = []
+  selected = 0
+
   setHighlighted = ->
     this.setOptions(
       fillOpacity: 0.5
@@ -9,19 +12,36 @@ $ ->
     )
 
   removeHighlighted = ->
-    this.setOptions(
-      fillOpacity: 0.25
-      strokeWeight: 0.5
-    )
+    if selected != this.title
+      this.setOptions(
+        fillOpacity: 0.25
+        strokeWeight: 0.5
+      )
 
   setListings = ->
+    for polygon in polygons
+      polygon.setOptions(
+        fillOpacity: 0.25
+        strokeWeight: 0.5
+      )
+    this.setOptions(
+      fillOpacity: 0.5
+      strokeWeight: 2
+    )
+    selected = this.title
     for area in gon.areas
       if area.id == this.title
         $('#listing_title').html "#{area.name} Listings"
+    counter = 0
     $('#wanted').html(
       for wanted in gon.wanteds
         if wanted.area_id == this.title
           "<div class='panel radius'><h5>#{wanted.volume} ac-ft</h5><p>#{wanted.source} | #{wanted.description}</p></div>"
+    )
+    $('#for_sale').html(
+      for for_sale in gon.for_sales
+        if for_sale.area_id == this.title
+          "<div class='panel radius'><h5>#{for_sale.volume} ac-ft</h5><p>#{for_sale.source} | #{for_sale.description} | #{for_sale.transferable_to}</p></div>"
     )
 
   displayArea = (doc) ->
@@ -38,6 +58,7 @@ $ ->
         google.maps.event.addListener doc[0].placemarks[0].polygon, 'mouseover', setHighlighted
         google.maps.event.addListener doc[0].placemarks[0].polygon, 'mouseout', removeHighlighted
         google.maps.event.addListener doc[0].placemarks[0].polygon, 'click', setListings
+        polygons.push doc[0].placemarks[0].polygon
 
   mapOptions =
     center: new google.maps.LatLng(40.5555, -111.888)
