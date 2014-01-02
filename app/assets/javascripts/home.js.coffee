@@ -41,7 +41,7 @@ $ ->
     $('#for_sale').html(
       for for_sale in gon.for_sales
         if for_sale.area_id == this.title
-          "<div class='panel radius'><h5>#{for_sale.volume} ac-ft</h5><p>#{for_sale.source} | #{for_sale.description} | #{for_sale.transferable_to}</p></div>"
+          "<div class='panel radius'><h5>#{for_sale.volume} ac-ft</h5><p>#{for_sale.source} | #{for_sale.description} | Transferable to: #{for_sale.transferable_to}</p></div>"
     )
 
   displayArea = (doc) ->

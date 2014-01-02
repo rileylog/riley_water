@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-WaterRightsListing::Application.config.secret_key_base = '4c86202478e5f300732abbceeffab5e5c7af9fad85b132cbb65c89e185469893e552b42e4b2be2aa2b73c38c723199e66451105342bb776a68545681b5924385'
+WaterRightsListing::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
