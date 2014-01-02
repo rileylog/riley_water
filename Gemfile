@@ -18,6 +18,7 @@ gem 'slim-rails'
 gem 'unicorn'
 gem 'carrierwave'
 gem 'gon'
+gem 'rails_12factor', group: :production
 group :development do
   gem 'meta_request'
   gem 'powder'
