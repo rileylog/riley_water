@@ -7,6 +7,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV['S3_SECRET'],                     # required
     :region                 => ENV['S3_REGION'],                  # optional, defaults to 'us-east-1'
   }
-  config.fog_directory  = ENV['S3_BUCKET_NAME']                             # required
+  config.fog_directory  = ENV['S3_BUCKET_NAME']  
+  config.fog_host = "#{ENV['S3_ASSET_URL']}/#{ENV['S3_BUCKET_NAME']}"
   
 end
