@@ -19,6 +19,7 @@ gem 'unicorn'
 gem 'carrierwave'
 gem 'gon'
 gem 'rails_12factor', group: :production
+gem "fog", "~> 1.3.1"
 group :development do
   gem 'meta_request'
   gem 'powder'
