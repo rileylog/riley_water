@@ -8,6 +8,6 @@ CarrierWave.configure do |config|
     :region                 => ENV['S3_REGION'],                  # optional, defaults to 'us-east-1'
   }
   config.fog_directory  = ENV['S3_BUCKET_NAME']  
-  config.fog_host = "#{ENV['S3_ASSET_URL']}/#{ENV['S3_BUCKET_NAME']}"
+  # config.fog_host = "#{ENV['S3_ASSET_URL']}/#{ENV['S3_BUCKET_NAME']}"
   
 end
