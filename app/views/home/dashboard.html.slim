@@ -1,0 +1,86 @@
+h2 Listing areas
+
+table
+  tr
+    th Name
+    th Color
+    th Kml
+    th
+    th
+    th
+
+  - @areas.each do |area|
+    tr
+      td = area.name
+      td = area.color
+      td = area.kml.url
+      td = link_to 'Show', area
+      td = link_to 'Edit', edit_area_path(area)
+      td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Area', new_area_path
+
+br
+br
+
+h2 Listing wanteds
+
+table
+  tr
+    th Area
+    th Volume
+    th Source
+    th Description
+    th
+    th
+    th
+
+  - @wanteds.each do |wanted|
+    tr
+      td = wanted.area.name
+      td = wanted.volume
+      td = wanted.source
+      td = wanted.description
+      td = link_to 'Show', wanted
+      td = link_to 'Edit', edit_wanted_path(wanted)
+      td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Wanted', new_wanted_path
+
+br
+br
+
+h2 Listing for_sales
+
+table
+  tr
+    th Area
+    th Volume
+    th Source
+    th Description
+    th Transferable to
+    th
+    th
+    th
+
+  - @for_sales.each do |for_sale|
+    tr
+      td = for_sale.area.name
+      td = for_sale.volume
+      td = for_sale.source
+      td = for_sale.description
+      td = for_sale.transferable_to
+      td = link_to 'Show', for_sale
+      td = link_to 'Edit', edit_for_sale_path(for_sale)
+      td = link_to 'Destroy', for_sale, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New For sale', new_for_sale_path
+
+br
+br

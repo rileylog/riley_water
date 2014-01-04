@@ -6,4 +6,10 @@ class HomeController < ApplicationController
     gon.wanteds = Wanted.all
     gon.for_sales = ForSale.all
   end
+
+  def dashboard
+    @areas = Area.all
+    @wanteds = Wanted.all
+    @for_sales = ForSale.all
+  end
 end
