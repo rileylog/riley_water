@@ -19,30 +19,53 @@ $ ->
       )
 
   setListings = ->
+    wanteds = []
+    for_sales = []
+
     for polygon in polygons
       polygon.setOptions(
         fillOpacity: 0.25
         strokeWeight: 0.5
       )
+
     this.setOptions(
       fillOpacity: 0.5
       strokeWeight: 2
     )
+
     selected = this.title
+
+    for wanted in gon.wanteds
+        if wanted.area_id == this.title
+          wanteds.push wanted
+
+    for for_sale in gon.for_sales
+        if for_sale.area_id == this.title
+          for_sales.push for_sale
+
     for area in gon.areas
       if area.id == this.title
         $('#listing_title').html "#{area.name} Listings"
-    counter = 0
-    $('#wanted').html(
-      for wanted in gon.wanteds
-        if wanted.area_id == this.title
+
+    if wanteds.length > 0
+      $('#wanted').html(
+        for wanted in wanteds
           "<div class='panel radius'><h5>#{wanted.volume} ac-ft</h5><p>#{wanted.source} | #{wanted.description}</p></div>"
-    )
-    $('#for_sale').html(
-      for for_sale in gon.for_sales
-        if for_sale.area_id == this.title
+      )
+    else
+      $('#wanted').html(
+          "<div class='panel radius'><p>No wanted listings for this area.</p></div>"
+      )
+
+    if for_sales.length > 0
+      $('#for_sale').html(
+        for for_sale in for_sales
           "<div class='panel radius'><h5>#{for_sale.volume} ac-ft</h5><p>#{for_sale.source} | #{for_sale.description} | Transferable to: #{for_sale.transferable_to}</p></div>"
-    )
+      )
+    else
+      $('#for_sale').html(
+          "<div class='panel radius'><p>No for sale listings for this area.</p></div>"
+      )
 
   displayArea = (doc) ->
     for area in gon.areas
@@ -84,6 +107,6 @@ $ ->
   # console.log doc.overlays
 
   for area in gon.areas
-    myParser.parse(area.kml.url)
+    myParser.parse area.kml.url
     # printShit "OMG"
 
