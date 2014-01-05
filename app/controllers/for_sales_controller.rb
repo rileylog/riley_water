@@ -1,5 +1,6 @@
 class ForSalesController < ApplicationController
   before_action :set_for_sale, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /for_sales
   # GET /for_sales.json
