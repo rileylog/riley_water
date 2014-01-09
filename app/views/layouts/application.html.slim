@@ -20,3 +20,19 @@ html
       == yield
     / Foundation 5 won't work when application.js is included in HEAD
     == javascript_include_tag "application"
+    javascript:
+      $(document).foundation({
+        orbit: {
+            pause_on_hover: true, // Pauses on the current slide while hovering
+            resume_on_mouseout: false, // If pause on hover is set to true, this setting resumes playback after mousing out 
+            navigation_arrows: true,
+            slide_number: false,
+            bullets: true, // Does the slider have bullets visible?
+            timer: false, // Does the slider have a timer visible?
+            variable_height: false, // Does the slider have variable height content?
+            swipe: true
+        }
+      });
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+

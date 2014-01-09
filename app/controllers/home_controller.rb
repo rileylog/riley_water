@@ -14,4 +14,7 @@ class HomeController < ApplicationController
     @wanteds = Wanted.all
     @for_sales = ForSale.all
   end
+
+  def new_home
+  end
 end
