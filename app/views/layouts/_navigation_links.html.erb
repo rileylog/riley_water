@@ -1,17 +1,35 @@
 <%# add navigation links to this file %>
-<% if user_signed_in? %>
-  <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
-<% else %>
-  <li><%= link_to 'Login', new_user_session_path %></li>
-<% end %>
-<% if user_signed_in? %>
-  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-  <li><%= link_to 'Dashboard', dashboard_path %></li>
-<% else %>
-  <li><%#= link_to 'Sign up', new_user_registration_path %></li>
-<% end %>
-<% if user_signed_in? %>
-  <% if current_user.has_role? :admin %>
-    <li><%= link_to 'Admin', users_path %></li>
+<ul class="left">
+  <li class="has-dropdown">
+    <a href="#">Services</a>
+    <ul class="dropdown">
+      <li><a href="#">Diligence Claims</a></li>
+      <li><a href="#">Proof of Beneficial Use</a></li>
+      <li><a href="#">Change Application</a></li>
+      <li><a href="#">Temporary Change Application</a></li>
+      <li><a href="#">Reports of Conveyance (Title)</a></li>
+      <li><a href="#">Dam Inspection</a></li>
+      <li><a href="#">40 Year Plan</a></li>
+      <li><a href="#">Extension Request</a></li>
+      <li><a href="#">Due Diligence (Research)</a></li>
+      <li><a href="#">Applications to appropriate</a></li>
+      <li><a href="#">Non-use Application</a></li>
+    </ul>
+  </li>
+  <li><a href="#">Projects</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">Buy/Sell</a></li>
+</ul>
+<ul class="right">
+  <% if user_signed_in? %>
+    <li><%= link_to 'Dashboard', dashboard_path %></li>
+    <% if current_user.has_role? :admin %>
+      <li><%= link_to 'Admin', users_path %></li>
+    <% end %>
+    <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+    <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+  <%#= link_to 'Login', new_user_session_path %>
   <% end %>
-<% end %>
+  <%#= link_to 'Sign up', new_user_registration_path %>
+</ul>
