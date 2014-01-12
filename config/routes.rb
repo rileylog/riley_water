@@ -5,9 +5,9 @@ WaterRightsListing::Application.routes.draw do
 
   resources :areas
 
-  root :to => "home#index"
+  root :to => "static_pages#home"
   devise_for :users, :controllers => {:registrations => "registrations"}, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :users
-  get "/dashboard", to: "home#dashboard", as: :dashboard
-  get "/new_home", to: "home#new_home", as: :new_home
+  get "/dashboard", to: "static_pages#dashboard", as: :dashboard
+  get "/buy-sell", to: "static_pages#buy_sell", as: :buy_sell
 end
