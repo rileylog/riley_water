@@ -1,7 +1,7 @@
 main {
   padding-top: 20px;
-  padding-bottom: 60px;
-  background-color: #b3b3b3;
+  padding-bottom: 50px;
+  // background-color: #b3b3b3;
 }
 
 #map_canvas {
@@ -22,5 +22,10 @@ main {
   h5 {
     margin-bottom: 5px;
   }
+}
+
+.footer-text {
+  font-size: 14px;
+  padding-top: 2px;
 }
 
