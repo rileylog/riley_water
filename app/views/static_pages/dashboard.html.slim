@@ -1,86 +1,85 @@
-h2 Areas
+.row
+  .large-12.columns
+    h2 Areas
 
-table
-  tr
-    th Name
-    th Color
-    th Kml
-    th
-    th
-    th
+    table
+      tr
+        th Name
+        th Color
+        th Kml
+        th
+        th
+        th
 
-  - @areas.each do |area|
-    tr
-      td = area.name
-      td = area.color
-      td = area.kml.url
-      td = link_to 'Show', area
-      td = link_to 'Edit', edit_area_path(area)
-      td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
+      - @areas.each do |area|
+        tr
+          td = area.name
+          td = area.color
+          td = area.kml.url
+          td = link_to 'Show', area
+          td = link_to 'Edit', edit_area_path(area)
+          td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-br
+    br
 
-= link_to 'New Area', new_area_path, class: "button"
+    = link_to 'New Area', new_area_path, class: "button"
 
-br
-br
+    br
+    br
 
-h2 Wanted listings
+    h2 Wanted listings
 
-table
-  tr
-    th Area
-    th Volume
-    th Source
-    th Description
-    th
-    th
-    th
+    table
+      tr
+        th Area
+        th Volume
+        th Source
+        th Description
+        th
+        th
+        th
 
-  - @wanteds.each do |wanted|
-    tr
-      td = wanted.area.name
-      td = wanted.volume
-      td = wanted.source
-      td = wanted.description
-      td = link_to 'Show', wanted
-      td = link_to 'Edit', edit_wanted_path(wanted)
-      td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+      - @wanteds.each do |wanted|
+        tr
+          td = wanted.area.name
+          td = wanted.volume
+          td = wanted.source
+          td = wanted.description
+          td = link_to 'Show', wanted
+          td = link_to 'Edit', edit_wanted_path(wanted)
+          td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-br
+    br
 
-= link_to 'New Wanted', new_wanted_path, class: "button"
+    = link_to 'New Wanted', new_wanted_path, class: "button"
 
-br
-br
+    br
+    br
 
-h2 For sale listings
+    h2 For sale listings
 
-table
-  tr
-    th Area
-    th Volume
-    th Source
-    th Description
-    th Transferable to
-    th
-    th
-    th
+    table
+      tr
+        th Area
+        th Volume
+        th Source
+        th Description
+        th Transferable to
+        th
+        th
+        th
 
-  - @for_sales.each do |for_sale|
-    tr
-      td = for_sale.area.name
-      td = for_sale.volume
-      td = for_sale.source
-      td = for_sale.description
-      td = for_sale.transferable_to
-      td = link_to 'Show', for_sale
-      td = link_to 'Edit', edit_for_sale_path(for_sale)
-      td = link_to 'Destroy', for_sale, data: {:confirm => 'Are you sure?'}, :method => :delete
+      - @for_sales.each do |for_sale|
+        tr
+          td = for_sale.area.name
+          td = for_sale.volume
+          td = for_sale.source
+          td = for_sale.description
+          td = for_sale.transferable_to
+          td = link_to 'Show', for_sale
+          td = link_to 'Edit', edit_for_sale_path(for_sale)
+          td = link_to 'Destroy', for_sale, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-br
+    br
 
-= link_to 'New For sale', new_for_sale_path, class: "button"
-
-br
-br
+    = link_to 'New For sale', new_for_sale_path, class: "button"
