@@ -13,12 +13,10 @@ WaterRightsListing::Application.routes.draw do
   get "/diligence-claims", to: "static_pages#diligence_claims", as: :diligence_claims
   get "/proof-of-beneficial-use", to: "static_pages#proof_of_beneficial_use", as: :proof_of_beneficial_use
   get "/change-application", to: "static_pages#change_application", as: :change_application
-  get "/temporary-change-applicaton", to: "static_pages#temporary_change_application", as: :temporary_change_application
   get "/reports-of-conveyance", to: "static_pages#reports_of_conveyance", as: :reports_of_conveyance
-  get "/dam-inspection", to: "static_pages#dam_inspection", as: :dam_inspection
   get "/fourty-year-plan", to: "static_pages#fourty_year_plan", as: :fourty_year_plan
   get "/extension-request", to: "static_pages#extension_request", as: :extension_request
-  get "/due-diligence", to: "static_pages#due_diligence", as: :due_diligence
+  get "/declarations-of-beneficial-use", to: "static_pages#declarations_of_beneficial_use", as: :declarations_of_beneficial_use
   get "/applications-to-appropriate", to: "static_pages#applications_to_appropriate", as: :applications_to_appropriate
   get "/non-use-application", to: "static_pages#non_use_application", as: :non_use_application
   get "/projects", to: "static_pages#projects", as: :projects
