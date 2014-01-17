@@ -31,6 +31,7 @@ main {
 
 .services-footer {
   // padding-right: 20px;
+  font-size: 12px;
 }
 
 .services-pano {
@@ -39,3 +40,9 @@ main {
   box-shadow: 5px 5px 25px #888;
 }
 
+.red-box {   
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0,0,0,.2);
+    background-color: #ae163e;
+}
