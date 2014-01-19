@@ -46,6 +46,7 @@ $ ->
     for area in gon.areas
       if area.id == this.title
         $('#listing_title').html "#{area.name} Listings"
+        $('#area_policy').html "#{area.policy}"
 
     if wanteds.length > 0
       $('#wanted').html(
