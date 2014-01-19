@@ -61,7 +61,7 @@ $ ->
     if for_sales.length > 0
       $('#for_sale').html(
         for for_sale in for_sales
-          "<div class='panel radius'><h5>#{for_sale.volume} ac-ft</h5><p>#{for_sale.source} | #{for_sale.description} | Transferable to: #{for_sale.transferable_to}</p></div>"
+          "<div class='panel radius'><h5>#{for_sale.volume} ac-ft | $#{for_sale.price}/ac-ft</h5><p>#{for_sale.source} | #{for_sale.description} | Transferable to: #{for_sale.transferable_to}</p></div>"
       )
     else
       $('#for_sale').html(

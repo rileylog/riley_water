@@ -70,6 +70,6 @@ class ForSalesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def for_sale_params
-      params.require(:for_sale).permit(:area_id, :volume, :source, :description, :transferable_to => [])
+      params.require(:for_sale).permit(:area_id, :volume, :source, :price, :description, :transferable_to => [])
     end
 end
