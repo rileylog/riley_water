@@ -5,6 +5,7 @@ class ForSalesController < ApplicationController
   # GET /for_sales
   # GET /for_sales.json
   def index
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @for_sales = ForSale.all
   end
 
@@ -15,16 +16,19 @@ class ForSalesController < ApplicationController
 
   # GET /for_sales/new
   def new
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @for_sale = ForSale.new
   end
 
   # GET /for_sales/1/edit
   def edit
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
   end
 
   # POST /for_sales
   # POST /for_sales.json
   def create
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @for_sale = ForSale.new(for_sale_params)
 
     respond_to do |format|
@@ -41,6 +45,7 @@ class ForSalesController < ApplicationController
   # PATCH/PUT /for_sales/1
   # PATCH/PUT /for_sales/1.json
   def update
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     respond_to do |format|
       if @for_sale.update(for_sale_params)
         format.html { redirect_to @for_sale, notice: 'For sale was successfully updated.' }
@@ -55,6 +60,7 @@ class ForSalesController < ApplicationController
   # DELETE /for_sales/1
   # DELETE /for_sales/1.json
   def destroy
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @for_sale.destroy
     respond_to do |format|
       format.html { redirect_to for_sales_url }

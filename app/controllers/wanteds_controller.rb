@@ -5,6 +5,7 @@ class WantedsController < ApplicationController
   # GET /wanteds
   # GET /wanteds.json
   def index
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @wanteds = Wanted.all
   end
 
@@ -15,16 +16,19 @@ class WantedsController < ApplicationController
 
   # GET /wanteds/new
   def new
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @wanted = Wanted.new
   end
 
   # GET /wanteds/1/edit
   def edit
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
   end
 
   # POST /wanteds
   # POST /wanteds.json
   def create
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @wanted = Wanted.new(wanted_params)
 
     respond_to do |format|
@@ -41,6 +45,7 @@ class WantedsController < ApplicationController
   # PATCH/PUT /wanteds/1
   # PATCH/PUT /wanteds/1.json
   def update
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     respond_to do |format|
       if @wanted.update(wanted_params)
         format.html { redirect_to @wanted, notice: 'Wanted was successfully updated.' }
@@ -55,6 +60,7 @@ class WantedsController < ApplicationController
   # DELETE /wanteds/1
   # DELETE /wanteds/1.json
   def destroy
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @wanted.destroy
     respond_to do |format|
       format.html { redirect_to wanteds_url }

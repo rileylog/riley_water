@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   end
 
   def dashboard
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @areas = Area.all
     @wanteds = Wanted.all
     @for_sales = ForSale.all

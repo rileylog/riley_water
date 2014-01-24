@@ -5,6 +5,7 @@ class AreasController < ApplicationController
   # GET /areas
   # GET /areas.json
   def index
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @areas = Area.all
   end
 
@@ -15,16 +16,19 @@ class AreasController < ApplicationController
 
   # GET /areas/new
   def new
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @area = Area.new
   end
 
   # GET /areas/1/edit
   def edit
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
   end
 
   # POST /areas
   # POST /areas.json
   def create
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @area = Area.new(area_params)
 
     respond_to do |format|
@@ -41,6 +45,7 @@ class AreasController < ApplicationController
   # PATCH/PUT /areas/1
   # PATCH/PUT /areas/1.json
   def update
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     respond_to do |format|
       if @area.update(area_params)
         format.html { redirect_to @area, notice: 'Area was successfully updated.' }
@@ -55,6 +60,7 @@ class AreasController < ApplicationController
   # DELETE /areas/1
   # DELETE /areas/1.json
   def destroy
+    authorize! :update, @user, :message => 'Not authorized as an administrator.'
     @area.destroy
     respond_to do |format|
       format.html { redirect_to areas_url }
