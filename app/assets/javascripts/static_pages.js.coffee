@@ -90,6 +90,12 @@ $ ->
     mapTypeId: google.maps.MapTypeId.ROADMAP
   map = new google.maps.Map($("#map_canvas")[0], mapOptions)
 
+  contactMapOptions =
+    center: new google.maps.LatLng(40.5555, -111.888)
+    zoom: 10
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  contactMap = new google.maps.Map($("#map-canvas")[0], contactMapOptions)
+
   # layer = new google.maps.FusionTablesLayer(
   #   query:
   #     select: "geometry"
