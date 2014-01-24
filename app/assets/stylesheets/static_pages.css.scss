@@ -48,5 +48,14 @@ main {
 }
 
 #area_policy {
-  font-size: 12px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+#listing_title {
+  font-weight: bold;
+}
+
+.tabs dd.active a {
+  background-color: #b3b3b3;
 }
