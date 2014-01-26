@@ -16,6 +16,7 @@
 //= require foundation
 //= require geoxml3
 //= require ProjectedOverlay
+//= require jquery.simplePagination
 
 
 $(function(){ $(document).foundation(); });
