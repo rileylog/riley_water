@@ -4,11 +4,11 @@ main {
   // background-color: #b3b3b3;
 }
 
-#map_canvas {
+#map_canvas.listings {
   height: 625px;
 }
 
-#contact_map {
+#map_canvas.contact {
   height: 375px;
 }
 

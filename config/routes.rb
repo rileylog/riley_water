@@ -1,4 +1,6 @@
 WaterRightsListing::Application.routes.draw do
+  get "listings/dashboard"
+  get "listings/buy_sell"
   resources :for_sales
 
   resources :wanteds
@@ -8,7 +10,6 @@ WaterRightsListing::Application.routes.draw do
   root :to => "static_pages#home"
   devise_for :users, :controllers => {:registrations => "registrations"}, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   resources :users
-  get "/dashboard", to: "static_pages#dashboard", as: :dashboard
   get "/services", to: "static_pages#services", as: :services
   get "/diligence-claims", to: "static_pages#diligence_claims", as: :diligence_claims
   get "/proof-of-beneficial-use", to: "static_pages#proof_of_beneficial_use", as: :proof_of_beneficial_use
@@ -22,5 +23,6 @@ WaterRightsListing::Application.routes.draw do
   get "/projects", to: "static_pages#projects", as: :projects
   get "/profile", to: "static_pages#profile", as: :profile
   get "/contact", to: "static_pages#contact", as: :contact
-  get "/buy-sell", to: "static_pages#buy_sell", as: :buy_sell
+  get "/dashboard", to: "listings#dashboard", as: :dashboard
+  get "/buy-sell", to: "listings#buy_sell", as: :buy_sell
 end
