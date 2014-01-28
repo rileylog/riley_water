@@ -22,6 +22,9 @@ $ ->
     wanteds = []
     for_sales = []
 
+    $("#transferable_to_area_name").val("")
+    $("#transferable_to_area_name").change()
+
     for polygon in polygons
       polygon.setOptions(
         fillOpacity: 0.25
@@ -36,12 +39,12 @@ $ ->
     selected = this.title
 
     for wanted in gon.wanteds
-        if wanted.area_id == this.title
-          wanteds.push wanted
+      if wanted.area_id == this.title
+        wanteds.push wanted
 
     for for_sale in gon.for_sales
-        if for_sale.area_id == this.title
-          for_sales.push for_sale
+       if for_sale.area_id == this.title
+        for_sales.push for_sale
 
     for area in gon.areas
       if area.id == this.title
@@ -74,6 +77,29 @@ $ ->
     else
       $('#for_sale').html(
           "<div class='panel radius'><p>No for sale listings for this area.</p></div>"
+      )
+
+  setListingsByTransferable = (selected, area_name) ->
+    for_sales = []
+
+    if area_name == "All"
+      for for_sale in gon.for_sales
+        if for_sale.area_id == selected
+            for_sales.push for_sale
+    else
+      for for_sale in gon.for_sales
+        if for_sale.area_id == selected
+          if $.inArray(area_name, for_sale.transferable_to) != -1
+            for_sales.push for_sale
+
+    if for_sales.length > 0
+      $('#for_sale').html(
+        for for_sale in for_sales
+          "<div class='panel radius'><h5>#{for_sale.volume} ac-ft | $#{for_sale.price}/ac-ft</h5><p>#{for_sale.source} | #{for_sale.description} | Transferable to: #{for_sale.transferable_to}</p></div>"
+      )
+    else
+      $('#for_sale').html(
+          "<div class='panel radius'><p>No for sale listings are transferable to that area.</p></div>"
       )
 
   displayArea = (doc) ->
@@ -118,4 +144,8 @@ $ ->
   for area in gon.areas
     myParser.parse area.kml.url
     # printShit "OMG"
+
+  $('#transferable_to_area_name').change ->
+    # alert $("#transferable_to_area_name :selected").text()
+    setListingsByTransferable selected, $("#transferable_to_area_name :selected").text()
 

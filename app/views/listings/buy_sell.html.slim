@@ -10,14 +10,17 @@
     p#area_policy
     dl.tabs data-tab=""
       dd.active
-        a href="#for_sale" For Sale
+        a href="#for_sale_container" For Sale
       dd
         a href="#wanted" Wanted
     .tabs-content
-      #for_sale.content.active
-        .panel.radius
-          p
-            | Ain't nothin fo sale yet! Ya gotta click the map first!
+      #for_sale_container.content.active
+        = simple_form_for(:transferable_to) do |f|
+          = f.input :area_name, collection: Area.all, label: "Only show listings transferable to: ", include_blank: "All"
+        #for_sale
+          .panel.radius
+            p
+              | Ain't nothin fo sale yet! Ya gotta click the map first!
       #wanted.content
         .panel.radius
           p
