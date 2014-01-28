@@ -6,6 +6,7 @@ table
     th Volume
     th Source
     th Description
+    th Contact Info
     th
     th
     th
@@ -16,6 +17,7 @@ table
       td = wanted.volume
       td = wanted.source
       td = wanted.description
+      td = wanted.contact_info
       td = link_to 'Show', wanted
       td = link_to 'Edit', edit_wanted_path(wanted)
       td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete

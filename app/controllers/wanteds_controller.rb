@@ -76,6 +76,6 @@ class WantedsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wanted_params
-      params.require(:wanted).permit(:area_id, :volume, :source, :description)
+      params.require(:wanted).permit(:area_id, :volume, :source, :description, :contact_info)
     end
 end

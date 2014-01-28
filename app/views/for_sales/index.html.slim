@@ -7,6 +7,7 @@ table
     th Source
     th Price
     th Description
+    th Contact Info
     th Transferable to
     th
     th
@@ -19,6 +20,7 @@ table
       td = for_sale.source
       td = for_sale.price
       td = for_sale.description
+      td = for_sale.contact_info
       td = for_sale.transferable_to
       td = link_to 'Show', for_sale
       td = link_to 'Edit', edit_for_sale_path(for_sale)
