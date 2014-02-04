@@ -2,13 +2,14 @@
   .large-6.columns.small-centered
     = image_tag "http://water-rights.s3.amazonaws.com/services/logo_waves.jpg", class: "logo"
 / navigation styled for Zurb Foundation 5
-nav.top-bar[data-topbar]
-  ul.title-area
-    li.name
-      = link_to 'Home', root_path
-    li.toggle-topbar.menu-icon
-      a[href="#"]
-        span Menu
-  .top-bar-section
-    ul
-      == render 'layouts/navigation_links'
+.contain-to-grid
+  nav.top-bar[data-topbar]
+    ul.title-area
+      li.name
+        = link_to 'Home', root_path
+      li.toggle-topbar.menu-icon
+        a[href="#"]
+          span Menu
+    .top-bar-section
+      ul
+        == render 'layouts/navigation_links'
