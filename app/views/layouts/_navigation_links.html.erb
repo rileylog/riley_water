@@ -1,5 +1,5 @@
 <%# add navigation links to this file %>
-<ul class="left">
+<ul class="right">
   <li class="has-dropdown">
     <%= link_to 'Services', services_path %>
     <ul class="dropdown">
@@ -19,7 +19,7 @@
   <li><%= link_to 'Contact', contact_path %></li>
   <li><%= link_to 'Buy/Sell', buy_sell_path %></li>
 </ul>
-<ul class="right">
+<ul class="left">
   <% if user_signed_in? %>
     <li><%= link_to 'Dashboard', dashboard_path %></li>
     <% if current_user.has_role? :admin %>
