@@ -15,8 +15,7 @@
         a href="#wanted" Wanted
     .tabs-content
       #for_sale_container.content.active
-        = simple_form_for(:transferable_to) do |f|
-          = f.input :area_name, collection: Area.all, label: "Only show listings transferable to: ", include_blank: "All"
+        
         #for_sale
           .panel.radius
             p
