@@ -7,7 +7,7 @@ $ ->
 
   setHighlighted = ->
     this.setOptions(
-      fillOpacity: 0.5
+      fillOpacity: 0.7
       strokeWeight: 2
     )
 
@@ -32,7 +32,7 @@ $ ->
       )
 
     this.setOptions(
-      fillOpacity: 0.5
+      fillOpacity: 0.7
       strokeWeight: 2
     )
 
@@ -120,7 +120,7 @@ $ ->
 
   mapOptions =
     center: new google.maps.LatLng(40.5555, -111.888)
-    zoom: 10
+    zoom: 8
     mapTypeId: google.maps.MapTypeId.ROADMAP
   map = new google.maps.Map($("#map_canvas")[0], mapOptions)
 

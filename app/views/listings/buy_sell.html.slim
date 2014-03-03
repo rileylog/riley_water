@@ -4,7 +4,10 @@
 /     | User: #{link_to user.name, user}
 
 .row
-  #map_canvas.listings.large-6.columns
+  .large-6.columns
+    h6
+      center Click an area on the map below to bring up listings and information on the policy, then choose "For Sale" or "Wanted"
+    #map_canvas.listings
   #data.large-6.columns
     h3#listing_title Listings
     p#area_policy
@@ -19,7 +22,7 @@
         #for_sale
           .panel.radius
             p
-              | Ain't nothin fo sale yet! Ya gotta click the map first!
+              | Select an area on the map to get started!
       #wanted.content
         .panel.radius
           p
