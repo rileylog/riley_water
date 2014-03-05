@@ -1,0 +1,30 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @owner.name
+p
+  strong Phone:
+  = @owner.phone
+p
+  strong Email:
+  = @owner.email
+p
+  strong Address 1:
+  = @owner.address_1
+p
+  strong Address 2:
+  = @owner.address_2
+p
+  strong City:
+  = @owner.city
+p
+  strong Zip:
+  = @owner.zip
+p
+  strong County:
+  = @owner.county
+
+= link_to 'Edit', edit_owner_path(@owner)
+'|
+= link_to 'Back', owners_path

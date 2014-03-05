@@ -1,0 +1,33 @@
+h1 Listing owners
+
+table
+  tr
+    th Name
+    th Phone
+    th Email
+    th Address 1
+    th Address 2
+    th City
+    th Zip
+    th County
+    th
+    th
+    th
+
+  - @owners.each do |owner|
+    tr
+      td = owner.name
+      td = owner.phone
+      td = owner.email
+      td = owner.address_1
+      td = owner.address_2
+      td = owner.city
+      td = owner.zip
+      td = owner.county
+      td = link_to 'Show', owner
+      td = link_to 'Edit', edit_owner_path(owner)
+      td = link_to 'Destroy', owner, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Owner', new_owner_path

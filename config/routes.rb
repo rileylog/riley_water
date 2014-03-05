@@ -1,4 +1,6 @@
 WaterRightsListing::Application.routes.draw do
+  resources :owners
+
   resources :diversions
 
   resources :records
