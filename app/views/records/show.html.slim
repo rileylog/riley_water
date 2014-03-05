@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @record.name
+p
+  strong Number:
+  = @record.number
+p
+  strong Type:
+  = @record.type
+
+= link_to 'Edit', edit_record_path(@record)
+'|
+= link_to 'Back', records_path
