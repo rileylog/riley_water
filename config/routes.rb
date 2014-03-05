@@ -1,4 +1,6 @@
 WaterRightsListing::Application.routes.draw do
+  resources :diversions
+
   resources :records
 
   get "listings/dashboard"

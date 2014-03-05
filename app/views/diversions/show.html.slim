@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @diversion.name
+p
+  strong Type:
+  = @diversion.type
+
+= link_to 'Edit', edit_diversion_path(@diversion)
+'|
+= link_to 'Back', diversions_path

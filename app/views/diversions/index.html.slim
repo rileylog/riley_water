@@ -1,0 +1,21 @@
+h1 Listing diversions
+
+table
+  tr
+    th Name
+    th Type
+    th
+    th
+    th
+
+  - @diversions.each do |diversion|
+    tr
+      td = diversion.name
+      td = diversion.type
+      td = link_to 'Show', diversion
+      td = link_to 'Edit', edit_diversion_path(diversion)
+      td = link_to 'Destroy', diversion, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Diversion', new_diversion_path
