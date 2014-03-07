@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305225116) do
+ActiveRecord::Schema.define(version: 20140305230242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20140305225116) do
     t.integer  "areaable_type"
   end
 
+  create_table "diversions", force: true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.integer  "diversionable_id"
+    t.integer  "diversionable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "for_sales", force: true do |t|
     t.integer  "area_id"
     t.float    "volume"
@@ -40,6 +49,31 @@ ActiveRecord::Schema.define(version: 20140305225116) do
   end
 
   add_index "for_sales", ["area_id"], name: "index_for_sales_on_area_id", using: :btree
+
+  create_table "owners", force: true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.string   "city"
+    t.integer  "zip"
+    t.string   "county"
+    t.integer  "ownerable_id"
+    t.integer  "ownerable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "records", force: true do |t|
+    t.string   "name"
+    t.string   "number"
+    t.string   "type"
+    t.integer  "recordable_id"
+    t.integer  "recordable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"

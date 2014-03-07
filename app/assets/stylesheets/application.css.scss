@@ -1,3 +1,12 @@
 @import "foundation_and_overrides";
 @import "static_pages";
 @import "simple_pagination";
+ .button-color {
+  background:red;
+}
+.button-color:hover {
+  background:#083906;
+}
+footer {
+  color:red;
+}
