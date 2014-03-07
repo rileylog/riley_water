@@ -3,7 +3,7 @@ html
   head
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
     title
-      = content_for?(:title) ? yield(:title) : 'Water Rights Listing'
+      = content_for?(:title) ? yield(:title) : 'Riley Water'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : 'Water Rights Listing'}"
     = include_gon
     = stylesheet_link_tag "application"
@@ -12,6 +12,7 @@ html
     / Modernizr is required for Zurb Foundation
     == javascript_include_tag "vendor/modernizr"
     == csrf_meta_tags
+    link href="https://dl.dropboxusercontent.com/u/38076607/WHEEL%20small.png" rel="shortcut icon"
   body
     header
       == render 'layouts/navigation'

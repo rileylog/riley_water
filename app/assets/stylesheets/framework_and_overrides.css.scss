@@ -46,3 +46,8 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+.new-button{
+  @include button-base;
+  @include button-size;
+  @include button-style(#222D69);
+}  
