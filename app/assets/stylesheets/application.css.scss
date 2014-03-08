@@ -1,3 +1,7 @@
 @import "foundation_and_overrides";
 @import "static_pages";
 @import "simple_pagination";
+.button {
+  $primary-color: #222D69;
+  @include button;
+}
