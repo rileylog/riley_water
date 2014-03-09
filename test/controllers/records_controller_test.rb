@@ -18,7 +18,7 @@ class RecordsControllerTest < ActionController::TestCase
 
   test "should create record" do
     assert_difference('Record.count') do
-      post :create, record: { name: @record.name, number: @record.number, type: @record.type }
+      post :create, record: { change_apps: @record.change_apps, comments: @record.comments, domestic: @record.domestic, flow: @record.flow, irrigation: @record.irrigation, owner: @record.owner, priority_date: @record.priority_date, proof_due_date: @record.proof_due_date, source: @record.source, stockwatering: @record.stockwatering, type: @record.type, volume: @record.volume }
     end
 
     assert_redirected_to record_path(assigns(:record))
@@ -35,7 +35,7 @@ class RecordsControllerTest < ActionController::TestCase
   end
 
   test "should update record" do
-    patch :update, id: @record, record: { name: @record.name, number: @record.number, type: @record.type }
+    patch :update, id: @record, record: { change_apps: @record.change_apps, comments: @record.comments, domestic: @record.domestic, flow: @record.flow, irrigation: @record.irrigation, owner: @record.owner, priority_date: @record.priority_date, proof_due_date: @record.proof_due_date, source: @record.source, stockwatering: @record.stockwatering, type: @record.type, volume: @record.volume }
     assert_redirected_to record_path(assigns(:record))
   end
 

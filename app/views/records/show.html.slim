@@ -1,14 +1,41 @@
 p#notice = notice
 
 p
-  strong Name:
-  = @record.name
-p
-  strong Number:
-  = @record.number
+  strong Owner:
+  = @record.owner
 p
   strong Type:
   = @record.type
+p
+  strong Source:
+  = @record.source
+p
+  strong Priority date:
+  = @record.priority_date
+p
+  strong Flow:
+  = @record.flow
+p
+  strong Volume:
+  = @record.volume
+p
+  strong Irrigation:
+  = @record.irrigation
+p
+  strong Domestic:
+  = @record.domestic
+p
+  strong Stockwatering:
+  = @record.stockwatering
+p
+  strong Change apps:
+  = @record.change_apps
+p
+  strong Proof due date:
+  = @record.proof_due_date
+p
+  strong Comments:
+  = @record.comments
 
 = link_to 'Edit', edit_record_path(@record)
 '|
