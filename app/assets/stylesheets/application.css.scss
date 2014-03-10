@@ -1,6 +1,7 @@
 @import "foundation_and_overrides";
 @import "static_pages";
 @import "simple_pagination";
+<<<<<<< HEAD
 .button-color {
   background:red;
 }
@@ -10,3 +11,9 @@
 footer {
   color:red;
 }
+=======
+.button {
+  $primary-color: #222D69;
+  @include button;
+}
+>>>>>>> 45d5da6c6bff8ba635ea2a29d7c2e730dc832cef
