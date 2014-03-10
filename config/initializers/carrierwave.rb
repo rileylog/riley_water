@@ -1,3 +1,5 @@
+#comment out the two if statements for s3 to work in development
+
 if Rails.env.production?
   CarrierWave.configure do |config|
     config.cache_dir = "#{Rails.root}/tmp/uploads"
@@ -13,7 +15,7 @@ if Rails.env.production?
     
   end
 end
-
+ 
 if Rails.env.development? or Rails.env.test?
   CarrierWave.configure do |config|
     config.cache_dir = "#{Rails.root}/tmp/uploads/dev"
