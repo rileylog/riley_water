@@ -20,6 +20,7 @@ gem 'carrierwave'
 gem 'gon'
 gem 'rails_12factor', group: :production
 gem "fog", "~> 1.3.1"
+gem 'cocoon'
 group :development do
   gem 'meta_request'
   gem 'powder'

@@ -6,6 +6,7 @@ class ListingsController < ApplicationController
     @areas = Area.all
     @wanteds = Wanted.all
     @for_sales = ForSale.all
+    @records = Record.all 
   end
 
   def buy_sell

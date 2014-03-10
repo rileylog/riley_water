@@ -2,7 +2,7 @@ class CreateRecords < ActiveRecord::Migration
   def change
     create_table :records do |t|
       t.string :owner
-      t.string :type
+      t.string :type_record
       t.string :source
       t.date :priority_date
       t.string :flow

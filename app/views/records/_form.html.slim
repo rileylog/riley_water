@@ -2,8 +2,10 @@
   = f.error_notification
 
   .form-inputs
+    = f.association :area
+    = f.association :diversions
     = f.input :owner
-    = f.input :type
+    = f.input :type_record
     = f.input :source
     = f.input :priority_date
     = f.input :flow

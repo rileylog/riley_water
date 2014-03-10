@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140305230242) do
+ActiveRecord::Schema.define(version: 20140310030805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,14 +66,27 @@ ActiveRecord::Schema.define(version: 20140305230242) do
   end
 
   create_table "records", force: true do |t|
-    t.string   "name"
-    t.string   "number"
-    t.string   "type"
-    t.integer  "recordable_id"
-    t.integer  "recordable_type"
+    t.string   "owner"
+    t.string   "type_record"
+    t.string   "source"
+    t.date     "priority_date"
+    t.string   "flow"
+    t.string   "volume"
+    t.string   "irrigation"
+    t.string   "domestic"
+    t.string   "stockwatering"
+    t.string   "change_apps"
+    t.date     "proof_due_date"
+    t.text     "comments"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "area_id"
+    t.integer  "diversionable_id"
+    t.string   "diversionable_type"
   end
+
+  add_index "records", ["area_id"], name: "index_records_on_area_id", using: :btree
+  add_index "records", ["diversionable_id", "diversionable_type"], name: "index_records_on_diversionable_id_and_diversionable_type", using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"

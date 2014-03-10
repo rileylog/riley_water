@@ -16,6 +16,7 @@
 //= require foundation
 //= require geoxml3
 //= require ProjectedOverlay
+//= require cocoon
 //= require jquery.simplePagination
 
 
