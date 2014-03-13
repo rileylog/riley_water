@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140310030805) do
+ActiveRecord::Schema.define(version: 20140313184648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,7 +34,10 @@ ActiveRecord::Schema.define(version: 20140310030805) do
     t.integer  "diversionable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "area_id"
   end
+
+  add_index "diversions", ["area_id"], name: "index_diversions_on_area_id", using: :btree
 
   create_table "for_sales", force: true do |t|
     t.integer  "area_id"
@@ -63,7 +66,12 @@ ActiveRecord::Schema.define(version: 20140310030805) do
     t.integer  "ownerable_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "records_id"
+    t.integer  "diversions_id"
   end
+
+  add_index "owners", ["diversions_id"], name: "index_owners_on_diversions_id", using: :btree
+  add_index "owners", ["records_id"], name: "index_owners_on_records_id", using: :btree
 
   create_table "records", force: true do |t|
     t.string   "owner"
@@ -83,10 +91,14 @@ ActiveRecord::Schema.define(version: 20140310030805) do
     t.integer  "area_id"
     t.integer  "diversionable_id"
     t.string   "diversionable_type"
+    t.integer  "diversions_id"
+    t.integer  "owner_id"
   end
 
   add_index "records", ["area_id"], name: "index_records_on_area_id", using: :btree
   add_index "records", ["diversionable_id", "diversionable_type"], name: "index_records_on_diversionable_id_and_diversionable_type", using: :btree
+  add_index "records", ["diversions_id"], name: "index_records_on_diversions_id", using: :btree
+  add_index "records", ["owner_id"], name: "index_records_on_owner_id", using: :btree
 
   create_table "roles", force: true do |t|
     t.string   "name"

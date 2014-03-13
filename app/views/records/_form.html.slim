@@ -3,7 +3,8 @@
 
   .form-inputs
     = f.association :area
-   
+    = f.association :diversions  
+    = f.association :owner
     = f.input :owner
     = f.input :type_record
     = f.input :source
@@ -19,3 +20,4 @@
 
   .form-actions
     = f.button :submit
+ 
