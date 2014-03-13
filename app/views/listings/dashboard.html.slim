@@ -66,6 +66,70 @@
 
     br
     = link_to 'New Water Rights Record', new_record_path, class: "button"
+
+    h2 Owners
+
+    table
+      tr
+        th Name
+        th Phone
+        th Email
+        th Address
+        th Address
+        th City
+        th Zip
+        th County
+
+      - @owners.each do |owner|
+        tr
+          td = owner.name
+          td = owner.phone
+          td = owner.email
+          td = owner.address_1
+          td = owner.address_2
+          td = owner.city
+          td = owner.zip
+          td = owner.county
+          td = link_to 'Show', wanted
+          td = link_to 'Edit', edit_wanted_path(wanted)
+          td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Owner', new_owner_path, class: "button"
+
+    br
+    br
+    h2 Diversions 
+
+    table
+      tr
+        th Name
+        th Type
+        th Area
+        th 
+        th 
+        th
+        th
+        th
+
+      - @diversions.each do |diversion|
+        tr
+          td = diversion.name
+          td = diversion.name
+          td = diversion.area.name
+          td = 
+          td = 
+          td = link_to 'Show', wanted
+          td = link_to 'Edit', edit_wanted_path(wanted)
+          td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Diversion', new_diversion_path, class: "button"
+
+    br
+    br
     h2 Wanted listings
 
     table

@@ -7,6 +7,8 @@ class ListingsController < ApplicationController
     @wanteds = Wanted.all
     @for_sales = ForSale.all
     @records = Record.all 
+    @owners = Owner.all
+    @diversions = Diversion.all
   end
 
   def buy_sell
