@@ -18,5 +18,13 @@
 //= require ProjectedOverlay
 //= require jquery.simplePagination
 //= require listings
+//= require dataTables/jquery.dataTables.foundation
+
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function(){
+  $('#area').dataTable({
+    "sPaginationType": "foundation"
+  });
+});

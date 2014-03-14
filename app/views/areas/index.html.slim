@@ -1,24 +1,26 @@
 h1 Listing areas
 
-table
-  tr
-    th Name
-    th Color
-    th Kml
-    th Policy
-    th
-    th
-    th
-
-  - @areas.each do |area|
+table#area
+  thead
     tr
-      td = area.name
-      td = area.color
-      td = area.kml.url
-      td = area.policy
-      td = link_to 'Show', area
-      td = link_to 'Edit', edit_area_path(area)
-      td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
+      th Name
+      th Color
+      th Kml
+      th Policy
+      th
+      th
+      th
+
+  tbody    
+    - @areas.each do |area|
+      tr
+        td = area.name
+        td = area.color
+        td = area.kml.url
+        td = area.policy
+        td = link_to 'Show', area
+        td = link_to 'Edit', edit_area_path(area)
+        td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 br
 

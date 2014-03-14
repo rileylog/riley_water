@@ -22,7 +22,7 @@ gem 'gon'
 gem 'rails_12factor', group: :production
 gem "fog", "~> 1.3.1"
 gem 'cocoon'
-gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
 group :development do
   gem 'meta_request'
   gem 'powder'
