@@ -1,8 +1,19 @@
+/*
 
-@import "foundation_and_overrides";
-@import "static_pages";
-@import "simple_pagination";
-@import "dataTables/jquery.dataTables.foundation";
+
+*/
+// @import "foundation_and_overrides";
+// @import "static_pages";
+// @import "simple_pagination";
+/*
+*= require_self
+*= require jquery.ui.core
+*= require jquery.ui.theme
+*= require foundation_and_overrides
+*= require static_pages
+*= require simple_pagination
+*= require_tree .
+*/
  .button-color {
   background:red;
 }

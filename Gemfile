@@ -6,7 +6,9 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'turbolinks'
+gem 'jquery-ui-rails'
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
 gem 'jbuilder', '~> 1.2'
 gem 'cancan'
 gem 'devise'
@@ -22,7 +24,7 @@ gem 'gon'
 gem 'rails_12factor', group: :production
 gem "fog", "~> 1.3.1"
 gem 'cocoon'
-gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
 group :development do
   gem 'meta_request'
   gem 'powder'

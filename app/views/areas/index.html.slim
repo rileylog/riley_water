@@ -1,6 +1,10 @@
+
+/ script src="assets/slimtable.min.js" type="text/javascript" 
+/ link href="assets/css/slimtable.css" rel="stylesheet" 
+
 h1 Listing areas
 
-table#area
+table#example1.slimtable
   thead
     tr
       th Name
@@ -25,3 +29,7 @@ table#area
 br
 
 = link_to 'New Area', new_area_path
+javascript:
+    | $(document.ready(function() {
+    | $("#example1").slimtable();
+    | });

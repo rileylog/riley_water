@@ -6,7 +6,7 @@ class AreasController < ApplicationController
   # GET /areas.json
   def index
     authorize! :update, @user, :message => 'Not authorized as an administrator.'
-    @areas = Area.all
+    @areas = Area.all.order(:name)
   end
 
   # GET /areas/1

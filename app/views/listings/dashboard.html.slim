@@ -90,9 +90,9 @@
           td = owner.city
           td = owner.zip
           td = owner.county
-          td = link_to 'Show', wanted
-          td = link_to 'Edit', edit_wanted_path(wanted)
-          td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to 'Show', owner
+          td = link_to 'Edit', edit_owner_path(owner)
+          td = link_to 'Destroy', owner, data: {:confirm => 'Are you sure?'}, :method => :delete
 
     br
 
@@ -120,9 +120,9 @@
           td = diversion.area.name
           td = 
           td = 
-          td = link_to 'Show', wanted
-          td = link_to 'Edit', edit_wanted_path(wanted)
-          td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+          td = link_to 'Show', diversion
+          td = link_to 'Edit', edit_diversion_path(diversion)
+          td = link_to 'Destroy', diversion, data: {:confirm => 'Are you sure?'}, :method => :delete
 
     br
 

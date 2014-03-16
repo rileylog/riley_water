@@ -12,19 +12,23 @@
 //
 //= require jquery
 //= require jquery_ujs
+
+
+
 // Note: Foundation 5 won't work with turbolinks
 //= require foundation
 //= require geoxml3
 //= require ProjectedOverlay
 //= require jquery.simplePagination
 //= require listings
-//= require dataTables/jquery.dataTables.foundation
+
+//= require_tree .
 
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation(); 
+  
 
-$(document).ready(function(){
-  $('#area').dataTable({
-    "sPaginationType": "foundation"
-  });
 });
+// $(document).ready(function(){
+//   $('.datatable')dataTable();
+// });
