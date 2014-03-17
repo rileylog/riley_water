@@ -10,7 +10,7 @@ WaterRightsListing::Application.routes.draw do
   resources :for_sales
 
   resources :wanteds
-
+  resources :my_account
   resources :areas
 
   root :to => "static_pages#home"

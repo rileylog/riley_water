@@ -1,0 +1,26 @@
+h1 My Account
+  
+.row
+  .large-6.columns
+    h6
+      center Click an area on the map below to bring up your water rights and points of diversion. 
+    #map_canvas.listings
+  #data.large-6.columns
+    h3#listing_title Listings
+    p#area_policy
+    dl.tabs data-tab=""
+      dd.active
+        a href="#record_container" Water Rights
+      dd
+        a href="#diversion" Diversions
+    .tabs-content
+      #record_container.content.active
+        
+        #record
+          .panel.radius
+            p
+              | Select an area on the map to get started!
+      #diversion.content
+        .panel.radius
+          p
+            | Select an area on the map to get started!
