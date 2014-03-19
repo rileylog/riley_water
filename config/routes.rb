@@ -10,7 +10,7 @@ WaterRightsListing::Application.routes.draw do
   resources :for_sales
 
   resources :wanteds
-  resources :my_account
+  #resources :my_account
   resources :areas
 
   root :to => "static_pages#home"
@@ -31,4 +31,5 @@ WaterRightsListing::Application.routes.draw do
   get "/contact", to: "static_pages#contact", as: :contact
   get "/dashboard", to: "listings#dashboard", as: :dashboard
   get "/buy-sell", to: "listings#buy_sell", as: :buy_sell
+  get "/my_account", to: "my_account#index", as: :my_account
 end

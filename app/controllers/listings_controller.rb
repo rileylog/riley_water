@@ -17,5 +17,6 @@ class ListingsController < ApplicationController
     gon.areas = Area.all
     gon.wanteds = Wanted.all
     gon.for_sales = ForSale.all
+    
   end
 end

@@ -50,6 +50,9 @@ $ ->
        if for_sale.area_id == this.title
         for_sales.push for_sale
 
+    for record in gon.records
+      record.push record     
+
     for area in gon.areas
       if area.id == this.title
         $('#listing_title').html "#{area.name} Listings"
