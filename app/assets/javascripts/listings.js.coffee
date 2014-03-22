@@ -119,8 +119,8 @@ $ ->
         polygons.push doc[0].placemarks[0].polygon
 
   mapOptions =
-    center: new google.maps.LatLng(40.5555, -111.888)
-    zoom: 8
+    center: new google.maps.LatLng(39.4997605, -111.547028)
+    zoom: 7
     mapTypeId: google.maps.MapTypeId.ROADMAP
   map = new google.maps.Map($("#map_canvas")[0], mapOptions)
 
