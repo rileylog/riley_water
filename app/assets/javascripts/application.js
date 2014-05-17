@@ -17,6 +17,7 @@
 //= require geoxml3
 //= require ProjectedOverlay
 //= require jquery.simplePagination
+//= require analytics
 
 
 
