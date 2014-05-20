@@ -1,32 +1,55 @@
 .row
-  h2 Water Rights
+  .large-12.columns
+    h2 Water Rights
 
-  table
-    tr
-      th Number
-      th Flow cfs
-      th Flow ac ft
-      th Sole supply acres
-      th Place of use
-      th Change application number
-      th Proof due date
-      th
-      th
-      th
-
-    - @water_rights.each do |water_right|
+    table
       tr
-        td = water_right.number
-        td = number_with_precision(water_right.flow_cfs, precision: 2)
-        td = number_with_precision(water_right.flow_ac_ft, precision: 2)
-        td = number_with_precision(water_right.sole_supply_acres, precision: 1)
-        td = water_right.place_of_use
-        td = water_right.change_application_number
-        td = water_right.proof_due_date
-        td = link_to 'Show', water_right
-        td = link_to 'Edit', edit_water_right_path(water_right)
-        td = link_to 'Destroy', water_right, data: {:confirm => 'Are you sure?'}, :method => :delete
+        th Number
+        th Flow cfs
+        th Flow ac ft
+        th Sole supply acres
+        th Place of use
+        th Change application number
+        th Proof due date
+        th
+        th
+        th
 
-  br
+      - @water_rights.each do |water_right|
+        tr
+          td = water_right.number
+          td = number_with_precision(water_right.flow_cfs, precision: 2)
+          td = number_with_precision(water_right.flow_ac_ft, precision: 2)
+          td = number_with_precision(water_right.sole_supply_acres, precision: 1)
+          td = water_right.place_of_use
+          td = water_right.change_application_number
+          td = water_right.proof_due_date
+          td = link_to 'Show', water_right
+          td = link_to 'Edit', edit_water_right_path(water_right)
+          td = link_to 'Destroy', water_right, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-  = link_to 'New Water Right', new_water_right_path, class: 'button'
+    br
+
+    = link_to 'New Water Right', new_water_right_path, class: 'button'
+
+    h2 Point of Diversions
+
+    table
+      tr
+        th Name
+        th Kml
+        th
+        th
+        th
+
+      - @point_of_diversions.each do |point_of_diversion|
+        tr
+          td = point_of_diversion.name
+          td = point_of_diversion.kml.url
+          td = link_to 'Show', point_of_diversion
+          td = link_to 'Edit', edit_point_of_diversion_path(point_of_diversion)
+          td = link_to 'Destroy', point_of_diversion, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Point of Diversion', new_point_of_diversion_path, class: 'button'

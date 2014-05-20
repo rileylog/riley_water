@@ -69,6 +69,6 @@ class PointOfDiversionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def point_of_diversion_params
-      params.require(:point_of_diversion).permit(:name)
+      params.require(:point_of_diversion).permit(:name, :kml)
     end
 end

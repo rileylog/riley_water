@@ -10,6 +10,9 @@ $ ->
   map = new google.maps.Map($("#map_canvas")[0], mapOptions)
 
   myParser = new geoXML3.parser(
-    afterParse: displayArea
+    map: map
     suppressInfoWindows: true
   )
+
+  for point_of_diversion in gon.point_of_diversions
+    myParser.parse point_of_diversion.kml.url
