@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128014731) do
+ActiveRecord::Schema.define(version: 20140520060721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,12 @@ ActiveRecord::Schema.define(version: 20140128014731) do
   end
 
   add_index "for_sales", ["area_id"], name: "index_for_sales_on_area_id", using: :btree
+
+  create_table "point_of_diversions", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -87,5 +93,17 @@ ActiveRecord::Schema.define(version: 20140128014731) do
   end
 
   add_index "wanteds", ["area_id"], name: "index_wanteds_on_area_id", using: :btree
+
+  create_table "water_rights", force: true do |t|
+    t.string   "number"
+    t.decimal  "flow_cfs"
+    t.decimal  "flow_ac_ft"
+    t.decimal  "sole_supply_acres"
+    t.string   "place_of_use"
+    t.string   "change_application_number"
+    t.date     "proof_due_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

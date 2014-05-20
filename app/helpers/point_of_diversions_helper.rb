@@ -1,0 +1,2 @@
+module PointOfDiversionsHelper
+end
