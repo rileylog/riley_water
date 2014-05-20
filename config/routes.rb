@@ -1,5 +1,6 @@
 WaterRightsListing::Application.routes.draw do
   resources :water_rights
+  resources :point_of_diversions
 
   get "listings/dashboard"
   get "listings/buy_sell"
