@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Number:
+  = @water_right.number
+p
+  strong Flow cfs:
+  = @water_right.flow_cfs
+p
+  strong Flow ac ft:
+  = @water_right.flow_ac_ft
+p
+  strong Sole supply acres:
+  = @water_right.sole_supply_acres
+p
+  strong Place of use:
+  = @water_right.place_of_use
+p
+  strong Change application number:
+  = @water_right.change_application_number
+p
+  strong Proof due date:
+  = @water_right.proof_due_date
+
+= link_to 'Edit', edit_water_right_path(@water_right)
+'|
+= link_to 'Back', water_rights_path

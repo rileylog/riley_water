@@ -1,0 +1,14 @@
+= simple_form_for(@water_right) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :number
+    = f.input :flow_cfs
+    = f.input :flow_ac_ft
+    = f.input :sole_supply_acres
+    = f.input :place_of_use
+    = f.input :change_application_number
+    = f.input :proof_due_date
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,31 @@
+h1 Listing water_rights
+
+table
+  tr
+    th Number
+    th Flow cfs
+    th Flow ac ft
+    th Sole supply acres
+    th Place of use
+    th Change application number
+    th Proof due date
+    th
+    th
+    th
+
+  - @water_rights.each do |water_right|
+    tr
+      td = water_right.number
+      td = water_right.flow_cfs
+      td = water_right.flow_ac_ft
+      td = water_right.sole_supply_acres
+      td = water_right.place_of_use
+      td = water_right.change_application_number
+      td = water_right.proof_due_date
+      td = link_to 'Show', water_right
+      td = link_to 'Edit', edit_water_right_path(water_right)
+      td = link_to 'Destroy', water_right, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Water right', new_water_right_path

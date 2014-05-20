@@ -18,12 +18,13 @@
           th Change Application Number
           th Proof Due Date
       tbody
-        tr
-          td 13-142
-          td Wells
-          td 5.12
-          td 1860
-          td 620
-          td Full Farm
-          td a28264
-          td 6/30/2016
+        - @water_rights.each do |water_right|
+          tr
+            td = water_right.number
+            td Wells
+            td = number_with_precision(water_right.flow_cfs, precision: 2)
+            td = number_with_precision(water_right.flow_ac_ft, precision: 2)
+            td = number_with_precision(water_right.sole_supply_acres, precision: 1)
+            td = water_right.place_of_use
+            td = water_right.change_application_number
+            td = water_right.proof_due_date
