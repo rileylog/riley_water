@@ -12,6 +12,10 @@ main {
   height: 375px;
 }
 
+#map_canvas.water_rights {
+  height: 525px;
+}
+
 #data {
   padding-right: 0px;
   h3 {
@@ -58,6 +62,10 @@ main {
 }
 
 #listing_title {
+  font-weight: bold;
+}
+
+#water_rights_title {
   font-weight: bold;
 }
 

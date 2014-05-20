@@ -25,4 +25,6 @@ WaterRightsListing::Application.routes.draw do
   get "/contact", to: "static_pages#contact", as: :contact
   get "/dashboard", to: "listings#dashboard", as: :dashboard
   get "/buy-sell", to: "listings#buy_sell", as: :buy_sell
+  get 'wrm-dashboard', to: 'water_rights_management#dashboard', as: :wrm_dashboard
+  get 'water-rights', to: 'water_rights_management#show_water_rights', as: :show_water_rights
 end
