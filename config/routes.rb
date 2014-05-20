@@ -2,12 +2,8 @@ WaterRightsListing::Application.routes.draw do
   resources :water_rights
   resources :point_of_diversions
 
-  get "listings/dashboard"
-  get "listings/buy_sell"
   resources :for_sales
-
   resources :wanteds
-
   resources :areas
 
   root :to => "static_pages#home"
