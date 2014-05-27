@@ -1,9 +1,10 @@
-@import "foundation_and_overrides";
+@import "bootstrap";
+// @import "foundation_and_overrides";
 @import "static_pages";
 @import "simple_pagination";
 .button {
   $primary-color: #222D69;
-  @include button;
+  // @include button;
 }
 footer, a {color: #222D69;}
 

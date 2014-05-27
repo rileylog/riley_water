@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 // Note: Foundation 5 won't work with turbolinks
-//= require foundation
+//= require bootstrap
 //= require geoxml3
 //= require ProjectedOverlay
 //= require jquery.simplePagination
@@ -21,4 +21,4 @@
 
 
 
-$(function(){ $(document).foundation(); });
+// $(function(){ $(document).foundation(); });

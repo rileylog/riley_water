@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title><%= content_for?(:title) ? yield(:title) : 'Riley Water' %></title>
+    <meta content="<%= content_for?(:description) ? yield(:description) : 'Water Rights Listing' %>" name="description" />
+    <%= include_gon %>
+    <%= stylesheet_link_tag "application" %>
+    <%= google_maps_api %>
+    <%= csrf_meta_tags %>
+    <link href="https://dl.dropboxusercontent.com/u/38076607/WHEEL%20small.png" rel="shortcut icon" />
+  </head>
+  <body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </main>
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "#{params[:controller]}" %>
+  </body>
+</html>
