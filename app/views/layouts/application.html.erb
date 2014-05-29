@@ -11,13 +11,16 @@
     <link href="https://dl.dropboxusercontent.com/u/38076607/WHEEL%20small.png" rel="shortcut icon" />
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-      <%= render 'layouts/messages' %>
-      <%= yield %>
-    </main>
+    <div id="wrap">
+      <header>
+        <%= render 'layouts/navigation' %>
+      </header>
+      <main role="main">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </main>
+      <div id="push"></div>
+    </div>
     <footer>
       <%= render 'layouts/footer' %>
     </footer>
