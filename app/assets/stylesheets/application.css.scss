@@ -1,11 +1,13 @@
-$brand-primary: #222D69;
+$brand-primary: #222d69;
+$second-color: #9d9d9d;
+$third-color: #2c2e2d;
 
 @import "bootstrap";
 // @import "foundation_and_overrides";
 @import "static_pages";
 @import "simple_pagination";
 .button {
-  $primary-color: #222D69;
+  // $primary-color: #222D69;
   // @include button;
 }
 footer, a {color: #222D69;}
@@ -47,6 +49,45 @@ h1 {
 }
 
 
+.btn-group > a {
+  height: 100px;
+  white-space: normal;
+}
+
+.btn-group > .btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-color: transparent;
+}
+
+.btn-second {
+  color: white;
+  background-color: $second-color;
+  border-color: darken($second-color, 5%);
+}
+
+.btn-second:hover, .btn-second:focus, .btn-second:active, .btn-second.active, .open > .btn-second.dropdown-toggle {
+  color: white;
+  background-color: darken($second-color, 10%);
+}
+
+.btn-third {
+  color: white;
+  background-color: $third-color;
+  border-color: darken($third-color, 5%);
+}
+
+.btn-third:hover, .btn-third:focus, .btn-third:active, .btn-third.active, .open > .btn-third.dropdown-toggle {
+  color: white;
+  background-color: darken($third-color, 10%);
+}
+
+#button-grid {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
 
 .no-padding {
   padding: 0;

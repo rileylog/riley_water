@@ -54,43 +54,23 @@
       <p>Riley Water Consulting, LC (RWC) is a water right engineering and consulting firm in Utah. RWC provides specialization in change applications, updating title on water rights, water right research, conflict resolution, enforcement action, diligence claims, nonuse applications, declarations of beneficial use, applications to appropriate, proofs of beneficial use and much more.</p>
       <p>Riley Water Consulting has more than 37 years of experience in water rights and has provided clients with personal, honest, ethical, and cost effective service in a timely manner.</p>
     </div>
-    
-    <div class="col-md-5 no-padding">
-      <ul id="services-grid">
-        <div class="row">
-          <div class="col-xs-4 color-one service-box">
-            <li class="text-center center-block two-lines"><%= link_to 'Diligence Claims', diligence_claims_path %></li>
-          </div>
-          <div class="col-xs-4 color-two service-box">
-            <li class="text-center center-block one-line"><%= link_to 'Proof', proof_of_beneficial_use_path %></li>
-          </div>
-          <div class="col-xs-4 color-three service-box">
-            <li class="text-center center-block two-lines buggy-bastard"><%= link_to 'Change Apps', change_application_path %></li>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 color-two service-box">
-            <li class="text-center center-block one-line"><%= link_to 'Title', reports_of_conveyance_path %></li>
-          </div>
-          <div class="col-xs-4 color-three service-box">
-            <li class="text-center center-block two-lines"><%= link_to 'Extension Request', extension_request_path %></li>
-          </div>
-          <div class="col-xs-4 color-one service-box">
-            <li class="text-center center-block two-lines buggy-bastard"><%= link_to '40 Year Plan', fourty_year_plan_path %></li>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-4 color-three service-box">
-            <li class="text-center center-block one-line"><%= link_to 'Declarations', declarations_of_beneficial_use_path %></li>
-          </div>
-          <div class="col-xs-4 color-one service-box">
-            <li class="text-center center-block two-lines"><%= link_to 'App To Appropriate', applications_to_appropriate_path %></li>
-          </div>
-          <div class="col-xs-4 color-two service-box">
-            <li class="text-center center-block two-lines buggy-bastard"><%= link_to 'Non-Use Apps', non_use_application_path %></li>
-          </div>
-        </div>
-      </ul>
+
+    <div id="button-grid" class="col-md-5 no-padding">
+      <div class="btn-group btn-group-justified">
+        <%= link_to 'Diligence Claims', diligence_claims_path, class: 'btn btn-primary', role: 'button' %>
+        <%= link_to 'Proof', proof_of_beneficial_use_path, class: 'btn btn-second', role: 'button'  %>
+        <%= link_to 'Change Apps', change_application_path, class: 'btn btn-third', role: 'button' %>
+      </div>
+      <div class="btn-group btn-group-justified">
+        <%= link_to 'Title', reports_of_conveyance_path, class: 'btn btn-second', role: 'button' %>
+        <%= link_to 'Extension Request', extension_request_path, class: 'btn btn-third', role: 'button' %>
+        <%= link_to '40 Year Plan', fourty_year_plan_path, class: 'btn btn-primary', role: 'button' %>
+      </div>
+      <div class="btn-group btn-group-justified">
+        <%= link_to 'Declarations', declarations_of_beneficial_use_path, class: 'btn btn-third', role: 'button' %>
+        <%= link_to 'App To Appropriate', applications_to_appropriate_path, class: 'btn btn-primary', role: 'button' %>
+        <%= link_to 'Non-Use Apps', non_use_application_path, class: 'btn btn-second', role: 'button' %>
+      </div>
     </div> 
   </div>
 
