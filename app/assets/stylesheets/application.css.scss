@@ -20,6 +20,106 @@ h3 {
   font-size: 1.2em;
 }
 
+h1 {
+  margin-top: 15px;
+  font-size: 1.65em;
+}
+
+#services-grid {
+  margin-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  .buggy-bastard {
+    width: 88px;
+  }
+  li {
+    list-style-type: none;
+    width: 106px;
+    a {
+      display: block;
+      color: white;
+      font-size: 1.15em;
+      line-height: 1.65em;
+    }
+  }
+}
+
+
+
+.no-padding {
+  padding: 0;
+}
+
+.color-one {
+  background-color: #203466;
+}
+
+.color-two {
+  background-color: #AEAEAE;
+}
+
+.color-three {
+  background-color: #2C2E2D;
+}
+
+.service-box {
+  height: 100px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.carousel-caption {
+  bottom: 5px;
+}
+
+.short-guy {
+  bottom: 24px;
+}
+
+/* (100 - 52) / 2 = 24 */
+.two-lines {
+  padding-top: 24px;
+}
+
+/* (100 - 26) / 2 = 37 */
+.one-line {
+  padding-top: 37px;
+}
+
+@media (min-width: 480px) { 
+  .service-box {
+    height: 120px;
+  }
+  /* old padding plus 10px */
+  .two-lines {
+    padding-top: 34px;
+  }
+  /* old padding plus 10px */
+  .one-line {
+    padding-top: 47px;
+  }
+  .carousel-caption {
+    bottom: 25px;
+  }
+  .short-guy {
+    bottom: 55px;
+  }
+}
+
+@media (min-width: $screen-sm-min) { 
+  main {
+    // background-color: red;
+  }
+
+  .navbar {
+    margin-bottom: 20px;
+  }
+
+  .carousel-caption {
+    bottom: 20px;
+  }
+}
+
 // .item {
 //   background: rgba(0, 0, 0, 0.5);
 //   z-index: 2;
