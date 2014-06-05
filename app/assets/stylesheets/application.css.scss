@@ -207,6 +207,14 @@ main {
   word-wrap: break-word;
 }
 
+.service-list-header {
+  margin-top: 15px;
+}
+
+.list-group {
+  margin-bottom: 0;
+}
+
 /* Lastly, apply responsive CSS fixes as necessary */
 // @media (max-width: 767px) {
 //   #footer {
