@@ -20,13 +20,19 @@ main {
   margin-bottom: 0;
 }
 
-h3 {
-  font-size: 1.2em;
-}
 
 h1 {
   margin-top: 15px;
   font-size: 1.65em;
+}
+
+h2 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
 }
 
 #services-grid {
@@ -170,6 +176,20 @@ main {
 
 .address {
   font-size: 0.95em;
+}
+
+.profile-pic {
+  display: block;
+  height: 250px;
+  margin: 0 auto;
+}
+
+.profile-name {
+  text-align: center;
+}
+
+.you-too-close-man {
+  margin-top: 5px;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
