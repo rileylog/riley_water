@@ -31,9 +31,10 @@ h2 {
   font-size: 1.5em;
 }
 
-h3 {
+h3, h4 {
   font-size: 1.2em;
 }
+
 
 #services-grid {
   margin-top: 20px;
@@ -195,6 +196,10 @@ main {
 .services-pic {
   max-width: 290px;
   margin-bottom: 10px;
+}
+
+.word-wrap {
+  word-wrap: break-word;
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
