@@ -1,0 +1,85 @@
+<!-- / h3 Home
+/ - @users.each do |user|
+/   p
+/     | User: #{link_to user.name, user}
+
+.row
+  .large-6.columns
+    h6
+      center Click an area on the map below to bring up listings and information on the policy, then choose "For Sale" or "Wanted"
+    #map_canvas.listings
+    h6
+      center Don't see the area that you want to buy or sell water rights in? Give us a call and we'll put it up on the website
+  #data.large-6.columns
+    h3#listing_title Listings
+    p#area_policy
+    dl.tabs data-tab=""
+      dd.active
+        a href="#for_sale_container" For Sale
+      dd
+        a href="#wanted" Wanted
+    .tabs-content
+      #for_sale_container.content.active
+        
+        #for_sale
+          .panel.radius
+            p
+              | Select an area on the map to get started!
+      #wanted.content
+        .panel.radius
+          p
+            | Select an area on the map to get started! -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h6 class="text-center">Click an area on the map below to bring up listings and information on the policy, then choose "For Sale" or "Wanted"</h6>
+      <div class="listings" id="map_canvas">
+      </div>
+      <h6 class="text-center">Don't see the area that you want to buy or sell water rights in? Give us a call and we'll put it up on the website</h6>
+    </div>
+    <div class="col-md-6" id="data">
+      <h3 id="listing_title">Listings</h3>
+      <p id="area_policy"></p>
+      <ul class="nav nav-pills">
+        <li class="active"><a href="#for_sale" data-toggle="pill">For Sale</a></li>
+        <li><a href="#wanted" data-toggle="pill">Wanted</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="for_sale">
+          <p>Select an area on the map to get started!</p>
+        </div>
+        <div class="tab-pane" id="wanted">
+          <p>Select an area on the map to get started!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- <dl class="tabs" data-tab="">
+        <dd class="active">
+          <a href="#for_sale_container_old">For Sale</a>
+        </dd>
+        <dd>
+          <a href="#wanted_old">Wanted</a>
+        </dd>
+      </dl>
+      <div class="tabs-content">
+        <div class="content active" id="for_sale_container_old">
+          <div id="for_sale_old">
+            <div class="panel radius">
+              <p>Select an area on the map to get started!</p>
+            </div>
+          </div>
+        </div>
+        <div class="content" id="wanted_old">
+          <div class="panel radius">
+            <p>Select an area on the map to get started!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+    
