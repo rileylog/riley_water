@@ -1,0 +1,26 @@
+<!-- = simple_form_for(@area) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :color
+    = f.input :kml
+    = f.input :policy
+
+  .form-actions.text-center
+    = f.button :submit -->
+
+
+<%= simple_form_for(@area) do |f| %>
+  <%= f.error_notification %>
+  
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :color %>
+    <%= f.input :kml %>
+    <%= f.input :policy %>
+  </div>
+  <div class="form-actions text-center">
+    <%= f.button :submit %>
+  </div>
+<% end %>

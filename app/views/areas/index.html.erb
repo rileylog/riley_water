@@ -1,0 +1,58 @@
+<!-- h1 Listing areas
+
+table
+  tr
+    th Name
+    th Color
+    th Kml
+    th Policy
+    th
+    th
+    th
+
+  - @areas.each do |area|
+    tr
+      td = area.name
+      td = area.color
+      td = area.kml.url
+      td = area.policy
+      td = link_to 'Show', area
+      td = link_to 'Edit', edit_area_path(area)
+      td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Area', new_area_path -->
+
+<div class="container">
+  <h1>Listing Areas</h1>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Color</th>
+          <th>Kml</th>
+          <th>Policy</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @areas.each do |area| %>
+        <tr>
+          <td><%= area.name %></td>
+          <td><%= area.color %></td>
+          <td><%= area.kml.url %></td>
+          <td><%= area.policy %></td>
+          <td><%= link_to 'Show', area %></td>
+          <td><%= link_to 'Edit', edit_area_path(area) %></td>
+          <td><%= link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <%= link_to 'New Area', new_area_path, class: "btn btn-primary" %>
+</div>

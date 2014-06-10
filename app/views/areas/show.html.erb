@@ -1,0 +1,42 @@
+<!-- p#notice = notice
+
+p
+  strong Name:
+  = @area.name
+p
+  strong Color:
+  = @area.color
+p
+  strong Kml:
+  = @area.kml.url
+p
+  strong Policy:
+  = @area.policy
+
+= link_to 'Edit', edit_area_path(@area)
+'  |
+= link_to 'Back', areas_path -->
+
+
+<div class="container">
+  <p id="notice">
+    <%= notice %>
+  </p>
+  <p>
+    <strong>Name:</strong>
+    <%= @area.name %>
+  </p>
+  <p>
+    <strong>Color:</strong>
+    <%= @area.color %>
+  </p>
+  <p class="word-wrap">
+    <strong>Kml:</strong>
+    <%= @area.kml.url %>
+  </p>
+  <p>
+    <strong>Policy:</strong>
+    <%= @area.policy %>
+  </p>
+  <%= link_to 'Edit', edit_area_path(@area) %> | <%= link_to 'Back', areas_path %>
+</div>
