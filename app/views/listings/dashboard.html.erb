@@ -1,0 +1,201 @@
+<!-- .row
+  .large-12.columns
+    h2 Areas
+
+    table
+      tr
+        th Name
+        th Color
+        th Kml
+        th Policy
+        th
+        th
+        th
+
+      - @areas.each do |area|
+        tr
+          td = area.name
+          td = area.color
+          td = area.kml.url
+          td = area.policy
+          td = link_to 'Show', area
+          td = link_to 'Edit', edit_area_path(area)
+          td = link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Area', new_area_path, class: "button"
+
+    br
+    br
+
+    h2 Wanted listings
+
+    table
+      tr
+        th Area
+        th Volume
+        th Source
+        th Description
+        th Contact Info
+        th
+        th
+        th
+
+      - @wanteds.each do |wanted|
+        tr
+          td = wanted.area.name
+          td = wanted.volume
+          td = wanted.source
+          td = wanted.description
+          td = wanted.contact_info
+          td = link_to 'Show', wanted
+          td = link_to 'Edit', edit_wanted_path(wanted)
+          td = link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New Wanted', new_wanted_path, class: "button"
+
+    br
+    br
+
+    h2 For sale listings
+
+    table
+      tr
+        th Area
+        th Volume
+        th Source
+        th Price
+        th Description
+        th Contact Info
+        th Transferable to
+        th
+        th
+        th
+
+      - @for_sales.each do |for_sale|
+        tr
+          td = for_sale.area.name
+          td = for_sale.volume
+          td = for_sale.source
+          td = for_sale.price
+          td = for_sale.description
+          td = for_sale.contact_info
+          td = for_sale.transferable_to
+          td = link_to 'Show', for_sale
+          td = link_to 'Edit', edit_for_sale_path(for_sale)
+          td = link_to 'Destroy', for_sale, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+    br
+
+    = link_to 'New For sale', new_for_sale_path, class: "button" -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Areas</h2>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Color</th>
+              <th>Kml</th>
+              <th>Policy</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @areas.each do |area| %>
+            <tr>
+              <td><%= area.name %></td>
+              <td><%= area.color %></td>
+              <td><%= area.kml.url %></td>
+              <td><%= area.policy %></td>
+              <td><%= link_to 'Show', area %></td>
+              <td><%= link_to 'Edit', edit_area_path(area) %></td>
+              <td><%= link_to 'Destroy', area, data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <%= link_to 'New Area', new_area_path, class: "btn btn-primary" %>
+
+      <h2 class="dashboard-header">Wanted listings</h2>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Volume</th>
+              <th>Source</th>
+              <th>Description</th>
+              <th>Contact Info</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @wanteds.each do |wanted| %>
+            <tr>
+              <td><%= wanted.area.name %></td>
+              <td><%= wanted.volume %></td>
+              <td><%= wanted.source %></td>
+              <td><%= wanted.description %></td>
+              <td><%= wanted.contact_info %></td>
+              <td><%= link_to 'Show', wanted %></td>
+              <td><%= link_to 'Edit', edit_wanted_path(wanted) %></td>
+              <td><%= link_to 'Destroy', wanted, data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <%= link_to 'New Wanted', new_wanted_path, class: "btn btn-primary" %>
+
+      <h2 class="dashboard-header">For Sale listings</h2>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Volume</th>
+              <th>Source</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Contact Info</th>
+              <th>Transferable to</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @for_sales.each do |for_sale| %>
+            <tr>
+              <td><%= for_sale.area.name %></td>
+              <td><%= for_sale.volume %></td>
+              <td><%= for_sale.source %></td>
+              <td><%= for_sale.price %></td>
+              <td><%= for_sale.description %></td>
+              <td><%= for_sale.contact_info %></td>
+              <td><%= for_sale.transferable_to %></td>
+              <td><%= link_to 'Show', for_sale %></td>
+              <td><%= link_to 'Edit', edit_for_sale_path(for_sale) %></td>
+              <td><%= link_to 'Destroy', for_sale, data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <%= link_to 'New For Sale', new_for_sale_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
