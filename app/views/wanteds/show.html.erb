@@ -1,0 +1,48 @@
+<!-- p#notice = notice
+
+p
+  strong Area:
+  = @wanted.area
+p
+  strong Volume:
+  = @wanted.volume
+p
+  strong Source:
+  = @wanted.source
+p
+  strong Description:
+  = @wanted.description
+p
+  strong Contact Info:
+  = @wanted.contact_info
+
+= link_to 'Edit', edit_wanted_path(@wanted)
+'|
+= link_to 'Back', wanteds_path -->
+
+<div class="container">
+  <p id="notice">
+    <%= notice %>
+  </p>
+  <p>
+    <strong>Area:</strong>
+    <%= @wanted.area.name %>
+  </p>
+  <p>
+    <strong>Volume:</strong>
+    <%= @wanted.volume %>
+  </p>
+  <p>
+    <strong>Source:</strong>
+    <%= @wanted.source %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= @wanted.description %>
+  </p>
+  <p>
+    <strong>Contact Info:</strong>
+    <%= @wanted.contact_info %>
+  </p>
+  <%= link_to 'Edit', edit_wanted_path(@wanted) %> | <%= link_to 'Back', wanteds_path %>
+</div>
