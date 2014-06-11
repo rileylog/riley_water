@@ -1,0 +1,63 @@
+<!-- p#notice = notice
+
+p
+  strong Area:
+  = @for_sale.area.name
+p
+  strong Volume:
+  = @for_sale.volume
+p
+  strong Source:
+  = @for_sale.source
+p
+  strong Price:
+  = @for_sale.price
+p
+  strong Description:
+  = @for_sale.description
+p
+  strong Contact Info:
+  = @for_sale.contact_info
+p
+  strong Transferable to:
+  = @for_sale.transferable_to
+
+= link_to 'Edit', edit_for_sale_path(@for_sale)
+'|
+= link_to 'Back', for_sales_path -->
+
+
+<div class="container">
+  <p class="notice">
+    <%= notice %>
+  </p>
+  <p>
+    <strong>Area:</strong>
+    <%= @for_sale.area.name %>
+  </p>
+  <p>
+    <strong>Volume:</strong>
+    <%= @for_sale.volume %>
+  </p>
+  <p>
+    <strong>Source:</strong>
+    <%= @for_sale.source %>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    <%= @for_sale.price %>
+  </p>
+  <p>
+    <strong>Description:</strong>
+    <%= @for_sale.description %>
+  </p>
+  <p>
+    <strong>Contact Info:</strong>
+    <%= @for_sale.contact_info %>
+  </p>
+  <p>
+    <strong>Transferable to:</strong>
+    <%= @for_sale.transferable_to %>
+  </p>
+  <%= link_to 'Edit', edit_for_sale_path(@for_sale) %> | <%= link_to 'Back', for_sales_path %>
+</div>

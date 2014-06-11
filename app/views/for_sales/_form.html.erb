@@ -1,0 +1,38 @@
+<!-- = simple_form_for(@for_sale) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :area
+    = f.input :volume
+    = f.input :source
+    = f.input :price
+    = f.input :description, as: :text
+    = f.input :contact_info
+    = f.collection_check_boxes :transferable_to, Area.all, :name, :name
+
+  .form-actions
+    = f.button :submit -->
+
+
+<%= simple_form_for(@for_sale) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :area %>
+    <%= f.input :volume %>
+    <%= f.input :source %>
+    <%= f.input :price %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :contact_info %>
+    <%= f.collection_check_boxes :transferable_to, Area.all, :name, :name %>
+  </div>
+
+  <div class="form-actions text-center">
+    <% if @for_sale.new_record? %>
+      <%= f.button :submit, 'Create For Sale' %>
+    <% else %>
+      <%= f.button :submit, 'Edit For Sale' %>
+    <% end %>
+  </div>
+
+<% end %>
