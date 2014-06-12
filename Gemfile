@@ -14,7 +14,7 @@ gem 'foundation-rails'
 gem 'bootstrap-sass'
 gem 'pg'
 gem 'rolify'
-gem 'simple_form', :git => "git://github.com/plataformatec/simple_form.git", :tag => "v3.1.0.rc1"
+gem 'simple_form', '3.1.0.rc1'
 gem 'slim-rails'
 gem 'unicorn'
 gem 'carrierwave'
